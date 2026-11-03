@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply — Eternity Recruitment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="application-page">
+    <nav class="navbar navbar-expand navbar-dark site-nav">
+        <div class="container">
+            <a class="brand" href="index.html">ETERNITY<span>.</span></a>
+            <a href="choose.html" class="back-link">← CHANGE DIVISION</a>
+        </div>
+    </nav>
+
+    <main class="container form-section">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="form-intro">
+                    <div class="eyebrow">
+                        <span class="small-line"></span>
+                        ETERNAL EMPLOYMENT
+                    </div>
+
+                    <span class="division-label" id="divisionLabel">
+                        DIVISION 001
+                    </span>
+
+                    <h1 class="form-heading" id="formHeading">
+                        Join the<br><em>divine.</em>
+                    </h1>
+
+                    <p class="form-description" id="formDescription">
+                        Your journey into eternity begins with
+                        a single application.
+                    </p>
+
+                    <div class="form-illustration">
+                        <img
+                            id="formImage"
+                            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=850&q=85"
+                            alt="Your chosen eternal division"
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="application-card">
+                    <div class="form-header">
+                        <div>
+                            <span class="mini-label">APPLICATION FORM</span>
+                            <h2 id="applicationTitle">Celestial Application</h2>
+                        </div>
+                        <span class="form-symbol">✧</span>
+                    </div>
+
+                    <form id="applicationForm">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">
+                                    FIRST NAME
+                                </label>
+                                <input
+                                    type="text"
+                                    class="form-control custom-input"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="Your first name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">
+                                    LAST NAME
+                                </label>
+                                <input
+                                    type="text"
+                                    class="form-control custom-input"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Your last name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">
+                                    EMAIL ADDRESS
+                                </label>
+                                <input
+                                    type="email"
+                                    class="form-control custom-input"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@earth.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="age" class="form-label">
+                                    MORTAL AGE
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control custom-input"
+                                    id="age"
+                                    name="age"
+                                    min="1"
+                                    max="150"
+                                    placeholder="Your age"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="role" class="form-label">
+                                    PREFERRED POSITION
+                                </label>
+                                <select
+                                    id="role"
+                                    name="role"
+                                    class="form-select custom-input"
+                                    required
+                                >
+                                    <option value="" selected disabled>
+                                        Select a position
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="testimony" class="form-label" id="testimonyLabel">
+                                    YOUR GREATEST ACT OF KINDNESS
+                                </label>
+                                <textarea
+                                    id="testimony"
+                                    name="testimony"
+                                    class="form-control custom-input"
+                                    rows="3"
+                                    placeholder="Tell us your story..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="motivation" class="form-label" id="motivationLabel">
+                                    WHY SHOULD WE RECRUIT YOUR SOUL?
+                                </label>
+                                <textarea
+                                    id="motivation"
+                                    name="motivation"
+                                    class="form-control custom-input"
+                                    rows="3"
+                                    placeholder="Make your case..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="agreement"
+                                        required
+                                    >
+                                    <label class="form-check-label" for="agreement">
+                                        I understand that eternal employment begins
+                                        only after my mortal life has ended.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="gold-button submit-button">
+                                    SUBMIT APPLICATION <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="form-disclaimer">
+                        FICTIONAL RECRUITMENT PORTAL. APPLICATION DATA IS NOT STORED.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© ETERNITY RECRUITMENT</span>
+            <span>YOUR DESTINY. YOUR DEPARTMENT.</span>
+            <span>HEAVEN & HELL DIVISIONS</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

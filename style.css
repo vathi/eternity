@@ -1,0 +1,729 @@
+
+:root {
+    --background: #111210;
+    --surface: #1b1c19;
+    --gold: #d4bd8a;
+    --gold-light: #eddbaf;
+    --cream: #f1ecdf;
+    --muted: #a5a49c;
+    --border: rgba(212, 189, 138, 0.19);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    color: var(--cream);
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-nav {
+    min-height: 92px;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    color: var(--cream);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.brand:hover {
+    color: var(--cream);
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.nav-caption,
+.back-link {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+}
+
+.back-link {
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+.home-hero {
+    min-height: calc(100vh - 165px);
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+.small-line {
+    display: inline-block;
+    height: 1px;
+    width: 29px;
+    background: var(--gold);
+}
+
+.display-heading,
+.section-heading,
+.form-heading,
+.success-heading {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.display-heading {
+    margin: 24px 0;
+    font-size: clamp(75px, 8vw, 125px);
+    line-height: 0.91;
+}
+
+.display-heading em,
+.section-heading em,
+.form-heading em,
+.success-heading em {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 390px;
+    margin: 34px 0;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+.gold-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    min-height: 58px;
+    padding: 0 27px;
+    background: var(--gold);
+    color: #171713;
+    border: 1px solid var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gold-button span {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.gold-button:hover {
+    background: transparent;
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.hero-footnote {
+    margin-top: 30px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #89887f;
+}
+
+.hero-image-wrap {
+    position: relative;
+    height: 590px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) saturate(0.75);
+    transition: transform 0.65s ease, filter 0.65s ease;
+}
+
+.hero-image-wrap:hover .hero-image {
+    transform: scale(1.1);
+    filter: brightness(0.96) saturate(1.1);
+}
+
+.image-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 65%,
+        rgba(0, 0, 0, 0.65)
+    );
+    pointer-events: none;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 24px;
+    left: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    pointer-events: none;
+}
+
+.image-label span:last-child {
+    font-size: 23px;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #85847b;
+}
+
+.choice-section {
+    padding-top: 75px;
+    padding-bottom: 70px;
+}
+
+.choice-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: clamp(58px, 7vw, 92px);
+    line-height: 1;
+}
+
+.section-description {
+    max-width: 500px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.realm-card {
+    position: relative;
+    display: block;
+    height: 440px;
+    overflow: hidden;
+    background: #292923;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.realm-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.75);
+    transition: transform 0.65s ease, filter 0.65s ease;
+}
+
+.realm-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.realm-card:hover img {
+    transform: scale(1.12);
+    filter: saturate(1.1);
+}
+
+.realm-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.8)
+    );
+    pointer-events: none;
+}
+
+.heaven-card .realm-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(202, 172, 110, 0.13),
+        rgba(10, 15, 12, 0.9)
+    );
+}
+
+.hell-card .realm-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(115, 23, 12, 0.35),
+        rgba(33, 6, 5, 0.95)
+    );
+}
+
+.hell-card img {
+    filter: sepia(0.65) saturate(1.4) hue-rotate(315deg);
+}
+
+.hell-card:hover img {
+    filter: sepia(0.45) saturate(1.8) hue-rotate(315deg);
+}
+
+.realm-content {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+    color: white;
+    pointer-events: none;
+}
+
+.realm-number,
+.realm-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #e3c998;
+}
+
+.realm-content h2 {
+    margin: 8px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 79px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.realm-content p {
+    margin-bottom: 26px;
+    font-size: 13px;
+    color: #d6d2c9;
+}
+
+.realm-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 19px;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.realm-action span {
+    font-size: 23px;
+}
+
+.choice-note {
+    margin: 32px 0 0;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.form-section {
+    padding-top: 85px;
+    padding-bottom: 90px;
+}
+
+.form-intro {
+    padding-right: 25px;
+}
+
+.division-label {
+    display: block;
+    margin-top: 65px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.form-heading {
+    margin: 12px 0 20px;
+    font-size: clamp(70px, 7vw, 100px);
+    line-height: 0.97;
+}
+
+.form-description {
+    max-width: 340px;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+.form-illustration {
+    height: 225px;
+    max-width: 390px;
+    margin-top: 35px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.form-illustration img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.form-illustration:hover img {
+    transform: scale(1.12);
+    filter: brightness(1);
+}
+
+.application-card {
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.mini-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+.form-header h2 {
+    margin: 9px 0 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.form-symbol {
+    font-size: 45px;
+    color: var(--gold);
+}
+
+.form-label {
+    margin-bottom: 11px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: var(--gold);
+}
+
+.custom-input {
+    min-height: 51px;
+    padding: 13px 15px;
+    background: #242520;
+    border: 1px solid #404037;
+    border-radius: 0;
+    color: var(--cream);
+    font-size: 13px;
+}
+
+.custom-input::placeholder {
+    color: #89897f;
+}
+
+.custom-input:focus {
+    background: #242520;
+    color: var(--cream);
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(212, 189, 138, 0.1);
+}
+
+textarea.custom-input {
+    resize: vertical;
+}
+
+.form-select.custom-input {
+    color: var(--cream);
+    background-color: #242520;
+}
+
+.form-select.custom-input option {
+    background: #242520;
+    color: var(--cream);
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.form-check-input {
+    flex-shrink: 0;
+    margin: 3px 0 0 !important;
+    border-radius: 0 !important;
+    border-color: var(--gold);
+    background-color: transparent;
+}
+
+.form-check-input:checked {
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+.form-check-label {
+    font-size: 11px;
+    line-height: 1.8;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.form-disclaimer {
+    margin: 28px 0 0;
+    text-align: center;
+    color: #89887f;
+    font-size: 9px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.realm-hell {
+    --gold: #de9778;
+    --gold-light: #f1b098;
+    --border: rgba(222, 151, 120, 0.19);
+}
+
+.realm-hell .form-illustration img {
+    filter: sepia(0.6) saturate(1.4) hue-rotate(315deg);
+}
+
+.realm-hell .form-illustration:hover img {
+    filter: sepia(0.35) saturate(1.6) hue-rotate(315deg);
+}
+
+.success-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 165px);
+    padding: 65px 0;
+    text-align: center;
+}
+
+.success-content {
+    max-width: 800px;
+}
+
+.success-icon {
+    margin-bottom: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 75px;
+    color: var(--gold);
+}
+
+.success-heading {
+    margin: 22px 0 28px;
+    font-size: clamp(63px, 8vw, 108px);
+    line-height: 0.97;
+}
+
+.success-main-message {
+    margin: 20px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.3;
+    color: var(--cream);
+}
+
+.success-description {
+    max-width: 470px;
+    margin: 22px auto;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.success-divider {
+    position: relative;
+    max-width: 300px;
+    margin: 32px auto;
+    color: var(--gold);
+}
+
+.success-divider::before,
+.success-divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: var(--border);
+    top: 50%;
+}
+
+.success-divider::before {
+    left: 0;
+}
+
+.success-divider::after {
+    right: 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+    .home-hero {
+        padding-top: 65px;
+    }
+
+    .hero-image-wrap {
+        height: 450px;
+    }
+
+    .form-intro {
+        padding-right: 0;
+    }
+
+    .division-label {
+        margin-top: 35px;
+    }
+
+    .form-illustration {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-nav {
+        min-height: 75px;
+    }
+
+    .brand {
+        font-size: 19px;
+        letter-spacing: 3px;
+    }
+
+    .nav-caption {
+        display: none;
+    }
+
+    .back-link {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .home-hero {
+        padding-top: 65px;
+        padding-bottom: 45px;
+    }
+
+    .display-heading {
+        font-size: clamp(68px, 15vw, 95px);
+    }
+
+    .hero-image-wrap {
+        height: 380px;
+    }
+
+    .choice-section {
+        padding-top: 65px;
+    }
+
+    .choice-heading {
+        margin-bottom: 35px;
+    }
+
+    .realm-card {
+        height: 400px;
+    }
+
+    .realm-content h2 {
+        font-size: 68px;
+    }
+
+    .form-section {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .application-card {
+        padding: 25px 20px;
+    }
+
+    .form-header h2 {
+        font-size: 31px;
+    }
+
+    .footer-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 23px 0;
+        text-align: center;
+    }
+
+    .footer-inner span:nth-child(2) {
+        display: none;
+    }
+
+    .success-section {
+        padding: 70px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
